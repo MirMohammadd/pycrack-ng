@@ -8,9 +8,9 @@ from lib.core.wordlists import wordlist_gen_ascii
 from lib.core.logger import logger
 import hashlib
 
-def write_wordlist():
+def write_wordlist(words):
     start_time = time.time()
-    for word in wordlist_gen_ascii("hello"):
+    for word in wordlist_gen_ascii(words):
         writer.write_line = True
         writer._write(word)
         elapsed_time = time.time() - start_time
@@ -20,9 +20,8 @@ def write_wordlist():
         print(f"\rElapsed Time: {minutes} minutes, {seconds} seconds, and {milliseconds} milliseconds", end="", flush=True)
         time.sleep(0.001) 
 
-def write_wordlist_hashed_sha256(output_file=os.getcwd()+"/temp/hashed.txt"):
+def write_wordlist_hashed_sha256(hash_input,output_file=os.getcwd()+"/temp/hashed.txt"):
     start_time = time.time()
-    hash_input = "hello"  # Replace with the desired string to be hashed
 
     with open(output_file, 'w') as file:
         for word in wordlist_gen_ascii(hash_input):
@@ -37,4 +36,4 @@ def write_wordlist_hashed_sha256(output_file=os.getcwd()+"/temp/hashed.txt"):
             time.sleep(0.001)
 
 
-write_wordlist_hashed_sha256()
+write_wordlist("Ali")

@@ -9,7 +9,7 @@ from lib.core.streamhandler import StreamReaderWriter
 from lib.core.logger import logger
 class Writer:
 
-    def __init__(self, file_path=cwd+"/temp/capture.txt", write_line=False, sensitive=False):
+    def __init__(self, file_path=cwd+"/temp/captures.txt", write_line=False, sensitive=False):
         self._lock = threading.Lock()
         self.file_path = os.path.abspath(file_path)
         self.write_line = write_line

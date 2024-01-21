@@ -16,7 +16,7 @@ def wordlist_gen_ascii(keyword):
         yield keyword + ''.join(map(str, combination))
         yield ''.join(map(str, combination)) + keyword
 
-# wordl = wordlist_gen_ascii("hello")
+# wordl = wordlist_gen_ascii("Ali")
 
 # for word in wordl:
 #     print(word)

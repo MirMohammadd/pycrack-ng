@@ -36,4 +36,4 @@ def write_wordlist_hashed_sha256(hash_input,output_file=os.getcwd()+"/temp/hashe
             time.sleep(0.001)
 
 
-write_wordlist("Ali")
+# write_wordlist("Ali")
